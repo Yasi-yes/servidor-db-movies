@@ -1,6 +1,8 @@
 import { initDB } from "./db/init"
-import { getAllMovies } from "./models/movies"
+import { getAllMovies, getMovieByTitle } from "./models/movies"
 
 const db = await initDB()
-const movies = getAllMovies(db)
-console.log(movies)
+//const peliculas = getAllMovies(db)
+//console.log(peliculas)
+const pelicula = getMovieByTitle(db, "Le Grand")
+console.log(pelicula)
